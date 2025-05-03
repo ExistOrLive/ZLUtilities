@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZLDeviceInfo : NSObject
 
++ (NSString *) getDeviceSystemNameVersion;
+
 + (NSString *) getDeviceSystemVersion;
 
 + (NSString *) getDeviceModel;

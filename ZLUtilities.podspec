@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZLUtilities'
-  s.version          = '0.1.0'
+  s.version          = '1.3.0'
   s.summary          = 'A short description of ZLUtilities.'
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,10 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
 
+  s.public_header_files = ['ZLUtilities/Classes/**/*.h']
   s.source_files = 'ZLUtilities/Classes/**/*'
+  s.resource_bundle = {"ZLUtilities.privacy"=>"Pod/Privacy/ZLUtilities/PrivacyInfo.xcprivacy"}
+  
   
   # s.resource_bundles = {
   #   'ZLUtilities' => ['ZLUtilities/Assets/*.png']
@@ -39,4 +42,9 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  
+  s.dependency 'ObjectMapper'
+  s.dependency 'Umbrella'
+  s.dependency 'Umbrella/Firebase'
+  s.dependency 'Firebase/Analytics'
 end
