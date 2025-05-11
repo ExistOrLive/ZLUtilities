@@ -47,9 +47,9 @@ public extension ZLIconFont {
 
     static let NoData = ZLIconFont(rawValue: "\u{e60e}")
 
-    static let Commit = ZLIconFont(rawValue: "\u{e857}")
+    static let Commit = ZLIconFont(rawValue: "\u{e657}")
 
-    static let Tag = ZLIconFont(rawValue: "\u{e738}")
+    static let Tag = ZLIconFont(rawValue: "\u{e752}")
 
     static let Alert = ZLIconFont(rawValue: "\u{e637}")
 
