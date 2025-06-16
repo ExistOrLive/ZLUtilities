@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZLUtilities'
-  s.version          = '1.3.0'
+  s.version          = '1.8.0'
   s.summary          = 'A short description of ZLUtilities.'
 
 # This description is used to generate tags and improve search results.
