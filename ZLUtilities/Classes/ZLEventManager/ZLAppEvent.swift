@@ -53,6 +53,8 @@ public enum ZLAppEvent {
     case githubAvatarDownload(result:Bool,duration:TimeInterval,type:Int,url: String,cacheType: Int,errorMsg:String)   /// 头像下载
     case zlRemoteConfigDownload(result:Bool,duration:TimeInterval,errorMsg:String)   /// 远程配置文件下载
     case zlRemoteConfigError(errorMsg: String, configStr: String)                    /// 配置解析失败
+    case unknownIssueTimelineType(type: String)
+    case unknownPrTimelineType(type: String)
     
 
 }
@@ -82,6 +84,10 @@ extension ZLAppEvent : EventType {
             return "zlRemoteConfigDownload"
         case .zlRemoteConfigError:
             return "zlRemoteConfigError"
+        case .unknownPrTimelineType:
+            return "unknownPrTimelineType"
+        case .unknownIssueTimelineType:
+            return "unknownIssueTimelineType"
         }
         
         
@@ -122,6 +128,10 @@ extension ZLAppEvent : EventType {
         case .zlRemoteConfigError(let errorMsg,let configStr):
             return ["errorMsg": errorMsg,
                     "configStr":configStr]
+        case .unknownIssueTimelineType(type: let type):
+            return ["type": type]
+        case .unknownPrTimelineType(type: let type):
+            return ["type": type]
         }
     }
 }
